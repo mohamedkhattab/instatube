@@ -90,7 +90,10 @@
 
    [:div {:class "details"}
     [:div {:class "title"} title]
-    [:div {:class "description"} desc]]])
+    [:div {:class "description"} desc]]
+
+   [:div {:class "footer"}
+    [:p {} "created by " [:a {:href "#"} "Mohamed Khattab"]]]])
 
 (defn app []
   [:div {:class "container"}

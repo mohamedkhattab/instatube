@@ -21,7 +21,15 @@
                                    :output-to "resources/public/js/dev.js"
                                    :output-dir "resources/public/js/cljs-dev/"
                                    :pretty-print true
-                                   :source-map true}}]}
+                                   :source-map true}}
+
+                       {:id "prod"
+                        :source-paths ["src/instatube/cljs"]
+                        :compiler {:output-to "resources/public/js/prod.js"
+                                   :optimizations :advanced
+                                   :output-dir "resources/public/js/cljs-prod/"
+                                   :pretty-print false
+                                   :source-map false}}]}
   
   :plugins [[lein-cljsbuild "1.1.7"]
             [lein-figwheel "0.5.13"]]

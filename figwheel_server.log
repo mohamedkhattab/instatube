@@ -820,3 +820,59 @@ notifying browser that file changed:  resources/public/js/cljs-dev/instatube/hea
 [0mCompiling "resources/public/js/dev.js" from ["src/instatube/cljs"]...[0m
 [32mSuccessfully compiled "resources/public/js/dev.js" in 0.341 seconds.[0m
 notifying browser that file changed:  resources/public/js/cljs-dev/instatube/header.js
+[0mCompiling "resources/public/js/dev.js" from ["src/instatube/cljs"]...[0m
+[36m----  Compiler Warning on   src/instatube/cljs/core.cljs   line:96  column:46  ----[0m
+
+  [1mUse of undeclared Var instatube.core/Mohamed[0m
+
+  [36m 92[0m  [36m    [:div {:class "title"} title][0m
+  [36m 93[0m  [36m    [:div {:class "description"} desc]][0m
+  [36m 94[0m  [36m[0m
+  [36m 95[0m  [36m   [:div {:class "footer"}[0m
+  [33m 96[0m  [1m    [:p {} [:em "<>"] " by " [:a {:href "#"} Mohamed Khattab]]]])[0m
+  [0m   [0m  [33m                                             ^--- Use of undeclared Var instatube.core/Mohamed[0m
+  [36m 97[0m  [36m[0m
+  [36m 98[0m  [36m(defn app [][0m
+  [36m 99[0m  [36m  [:div {:class "container"}[0m
+  [36m100[0m  [36m   [:div {:class "row"}[0m
+  [36m101[0m  [36m    [header EVENTCHANNEL app-state]][0m
+
+[36m----  Compiler Warning : Please see src/instatube/cljs/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/instatube/cljs/core.cljs   line:96  column:54  ----[0m
+
+  [1mUse of undeclared Var instatube.core/Khattab[0m
+
+  [36m 92[0m  [36m    [:div {:class "title"} title][0m
+  [36m 93[0m  [36m    [:div {:class "description"} desc]][0m
+  [36m 94[0m  [36m[0m
+  [36m 95[0m  [36m   [:div {:class "footer"}[0m
+  [33m 96[0m  [1m    [:p {} [:em "<>"] " by " [:a {:href "#"} Mohamed Khattab]]]])[0m
+  [0m   [0m  [33m                                                     ^--- Use of undeclared Var instatube.core/Khattab[0m
+  [36m 97[0m  [36m[0m
+  [36m 98[0m  [36m(defn app [][0m
+  [36m 99[0m  [36m  [:div {:class "container"}[0m
+  [36m100[0m  [36m   [:div {:class "row"}[0m
+  [36m101[0m  [36m    [header EVENTCHANNEL app-state]][0m
+
+[36m----  Compiler Warning : Please see src/instatube/cljs/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/public/js/dev.js" in 0.411 seconds.[0m
+notifying browser that file changed:  resources/public/js/cljs-dev/instatube/core.js
+[0mCompiling "resources/public/js/dev.js" from ["src/instatube/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/dev.js" in 0.37 seconds.[0m
+notifying browser that file changed:  resources/public/js/cljs-dev/instatube/core.js
+[0mCompiling "resources/public/js/dev.js" from ["src/instatube/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/dev.js" in 0.318 seconds.[0m
+notifying browser that file changed:  resources/public/js/cljs-dev/instatube/core.js
+[0mCompiling "resources/public/js/dev.js" from ["src/instatube/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/dev.js" in 0.342 seconds.[0m
+notifying browser that file changed:  resources/public/js/cljs-dev/instatube/core.js
+Notifying browser that CSS file changed: resources/public/css/style.css
+Notifying browser that CSS file changed: resources/public/css/style.css
+Notifying browser that CSS file changed: resources/public/css/style.css
+Notifying browser that CSS file changed: resources/public/css/style.css
+Notifying browser that CSS file changed: resources/public/css/style.css
+Notifying browser that CSS file changed: resources/public/css/style.css
+Notifying browser that CSS file changed: resources/public/css/style.css
+Notifying browser that CSS file changed: resources/public/css/style.css
+Notifying browser that CSS file changed: resources/public/css/style.css
+Notifying browser that CSS file changed: resources/public/css/style.css
