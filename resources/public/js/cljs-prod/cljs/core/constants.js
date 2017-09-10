@@ -214,6 +214,7 @@ cljs.core.cst$sym$not_DASH_native = new cljs.core.Symbol(null,"not-native","not-
 cljs.core.cst$sym$js_STAR_ = new cljs.core.Symbol(null,"js*","js*",-1134233646,null);
 cljs.core.cst$kw$reagent_DASH_render = new cljs.core.Keyword(null,"reagent-render","reagent-render",-985383853);
 cljs.core.cst$sym$strobj = new cljs.core.Symbol(null,"strobj","strobj",1088091283,null);
+cljs.core.cst$kw$auto_DASH_play = new cljs.core.Keyword(null,"auto-play","auto-play",-645319501);
 cljs.core.cst$sym$catch_DASH_block = new cljs.core.Symbol(null,"catch-block","catch-block",-1479223021,null);
 cljs.core.cst$kw$priority = new cljs.core.Keyword(null,"priority","priority",1431093715);
 cljs.core.cst$kw$solos = new cljs.core.Keyword(null,"solos","solos",1441458643);

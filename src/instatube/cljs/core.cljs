@@ -92,14 +92,15 @@
     [:iframe {:class "embed-responsive-item"
               :allow-full-screen "allowfullscreen"
               :frame-border 0
-              :src (str "https://www.youtube.com/embed/" (if (nil? videoId) "SW-BU6keEUw" videoId))}]]
+              :auto-play 1
+              :src (str "https://www.youtube.com/embed/" (if (nil? videoId) "SW-BU6keEUw" videoId) "?autoplay=1")}]]
 
    [:div {:class "details"}
     [:div {:class "title"} (if (nil? title) "Eminem - \"Mom's Spaghetti\" (Music Video)" title)]
     [:div {:class "description"} (if (nil? desc) "parody Lyric subtitles available in video options (click the CC icon)" desc)]]
 
    [:div {:class "footer"}
-    [:p {} "InstaTube by " [:a {:href "#"} "Mohamed Khattab"]]]])
+    [:p {} "InstaTube by " [:a {:href "mailto:mohamedkhattab@protonmail.com?Subject=InstaTube"} "Mohamed Khattab"]]]])
 
 (defn app []
   [:div {:class "container"}
