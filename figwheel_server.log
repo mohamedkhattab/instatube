@@ -811,3 +811,12 @@ notifying browser that file changed:  resources/public/js/cljs-dev/instatube/vid
 notifying browser that file changed:  resources/public/js/dev.js
 notifying browser that file changed:  resources/public/js/cljs-dev/goog/deps.js
 notifying browser that file changed:  resources/public/js/cljs-dev/instatube/header.js
+[0mCompiling "resources/public/js/dev.js" from ["src/instatube/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/dev.js" in 0.352 seconds.[0m
+notifying browser that file changed:  resources/public/js/cljs-dev/instatube/header.js
+[0mCompiling "resources/public/js/dev.js" from ["src/instatube/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/dev.js" in 0.353 seconds.[0m
+notifying browser that file changed:  resources/public/js/cljs-dev/instatube/header.js
+[0mCompiling "resources/public/js/dev.js" from ["src/instatube/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/dev.js" in 0.341 seconds.[0m
+notifying browser that file changed:  resources/public/js/cljs-dev/instatube/header.js
