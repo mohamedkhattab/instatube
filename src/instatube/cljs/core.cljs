@@ -13,9 +13,9 @@
 ;; define the main app state (once for figwheel)
 (defonce app-state
   (r/atom {:active-item "Home"
-           :term "mom's spagetti"
+           :term "nirvana"
            :videos []
-           :active-video {}}))
+           :active-video "hTWKbfoikeg"}))
 
 ;; Arbitrary events will be pushed on the event channel (queue)
 (def EVENTCHANNEL (chan))
@@ -68,7 +68,7 @@
 
 ;;;; BUG videoId intitializes to nil
 ;; initialize UI state
-(put! EVENTCHANNEL [:query-youtube-search {:term (:term @app-state)}])
+(put! EVENTCHANNEL [:query-youtube-search {:term "nirvana"}])
 (put! EVENTCHANNEL [:update-active-video {:active-video (first (:videos @app-state))}])
 
 ;; event loop
@@ -90,7 +90,7 @@
 
    [:div {:class "details"}
     [:div {:class "title"} title]
-    [:div {:class "desc"} desc]]])
+    [:div {:class "description"} desc]]])
 
 (defn app []
   [:div {:class "container"}
@@ -105,8 +105,4 @@
     
     [video-list EVENTCHANNEL (:videos @app-state)]]])
 
-(do
-  (put! EVENTCHANNEL [:query-youtube-search {:term (:term @app-state)}])
-  (put! EVENTCHANNEL [:update-active-video {:active-video (first (:videos @app-state))}])
-  (r/render [app] (js/document.querySelector "#cljs-target")))
-
+(r/render [app] (js/document.querySelector "#cljs-target"))

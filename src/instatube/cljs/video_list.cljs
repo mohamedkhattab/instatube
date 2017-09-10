@@ -1,14 +1,12 @@
 (ns instatube.video-list
-  (:require [cljs.core.async :refer [put!]]
-            [instatube.nav :refer [active?]]
-            [instatube.core :refer [get-video-id]]))
+  (:require [cljs.core.async :refer [put!]]))
 
 
-(defn video-list [EVENTCHANNEL videos active-video]
+(defn video-list [EVENTCHANNEL videos]
   [:div {:class "col-md-4"}
    [:ul {:class "list-group"}
     (for [video videos]
-      [:li {:class (if (active? (get-video-id video) (get-video-id active-video)) "list-group-item active" "list-group-item")
+      [:li {:class "list-group-item"
             :on-click (fn []
                         (put! EVENTCHANNEL [:update-active-video {:active-video video}]))
             :key (get-in video [:etag])}
