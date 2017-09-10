@@ -5,7 +5,8 @@
             [ajax.core :as ajax]
 
             [instatube.header :refer [header]]
-            [instatube.video-list :refer [video-list]]))
+            [instatube.video-list :refer [video-list]]
+            [instatube.util :as util]))
 
 ;; The Youtube API KEY
 (def YOUTUBE_API_KEY "AIzaSyANo3bt4bOjVU_VxSGwkbZSfrLoj9VREGo")
@@ -16,7 +17,7 @@
            :term "mom's spaghetti"
            :videos []
            
-           ;; PROBLEM very hacky soultion, must update
+           ;; PROBLEM very hacky soultion, must find a better solution
            :active-video {:kind "youtube#searchResult",
                           :etag "\"m2yskBQFythfE4irbTIeOgYYfBU/oOcAJY2tsrC2VF66LWE9XMHGULc\"",
                           :id {:kind "youtube#video", :videoId "SW-BU6keEUw"},
@@ -77,19 +78,20 @@
    :update-active-video (fn [{:keys [active-video]}]
                           (swap! app-state assoc-in [:active-video] active-video))
    
-   :query-youtube-search (fn [{:keys [term]}]
-                           (ajax/GET
-                            ;; search URI
-                            "https://www.googleapis.com/youtube/v3/search"
+   :query-youtube-search (util/debounce (fn [{:keys [term]}]
+                                          (ajax/GET
+                                           ;; search URI
+                                           "https://www.googleapis.com/youtube/v3/search"
 
-                            ;; URI parameters
-                            {:params {:q term
-                                      :maxResults 5
-                                      :part "snippet"
-                                      :type "video,playlist"
-                                      :key YOUTUBE_API_KEY}
-                             :handler handle-youtube-resonse
-                             :response-format (ajax/json-response-format {:keywords? true})}))})
+                                           ;; URI parameters
+                                           {:params {:q term
+                                                     :maxResults 5
+                                                     :part "snippet"
+                                                     :type "video,playlist"
+                                                     :key YOUTUBE_API_KEY}
+                                            :handler handle-youtube-resonse
+                                            :response-format (ajax/json-response-format {:keywords? true})}))
+                                        500)})
 
 ;; initialize UI state
 (put! EVENTCHANNEL [:query-youtube-search {:term (:term @app-state)}])
