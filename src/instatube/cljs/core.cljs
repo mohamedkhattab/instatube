@@ -13,9 +13,34 @@
 ;; define the main app state (once for figwheel)
 (defonce app-state
   (r/atom {:active-item "Home"
-           :term "nirvana"
+           :term "mom's spaghetti"
            :videos []
-           :active-video "hTWKbfoikeg"}))
+           
+           ;; PROBLEM very hacky soultion, must update
+           :active-video {:kind "youtube#searchResult",
+                          :etag "\"m2yskBQFythfE4irbTIeOgYYfBU/oOcAJY2tsrC2VF66LWE9XMHGULc\"",
+                          :id {:kind "youtube#video", :videoId "SW-BU6keEUw"},
+                          :snippet
+                          {:publishedAt "2014-05-05T16:31:39.000Z",
+                           :channelId "UClMFPzhYPLlOR4ojWwFWZfg",
+                           :title "Eminem - \"Mom's Spaghetti\" (Music Video)",
+                           :description
+                           "parody Lyric subtitles available in video options (click the CC icon)",
+                           :thumbnails
+                           {:default
+                            {:url "https://i.ytimg.com/vi/SW-BU6keEUw/default.jpg",
+                             :width 120,
+                             :height 90},
+                            :medium
+                            {:url "https://i.ytimg.com/vi/SW-BU6keEUw/mqdefault.jpg",
+                             :width 320,
+                             :height 180},
+                            :high
+                            {:url "https://i.ytimg.com/vi/SW-BU6keEUw/hqdefault.jpg",
+                             :width 480,
+                             :height 360}},
+                           :channelTitle "Jay Green's stuff", 
+                           :liveBroadcastContent "none"}}}))
 
 ;; Arbitrary events will be pushed on the event channel (queue)
 (def EVENTCHANNEL (chan))
@@ -66,10 +91,8 @@
                              :handler handle-youtube-resonse
                              :response-format (ajax/json-response-format {:keywords? true})}))})
 
-;;;; BUG videoId intitializes to nil
 ;; initialize UI state
-(put! EVENTCHANNEL [:query-youtube-search {:term "nirvana"}])
-(put! EVENTCHANNEL [:update-active-video {:active-video (first (:videos @app-state))}])
+(put! EVENTCHANNEL [:query-youtube-search {:term (:term @app-state)}])
 
 ;; event loop
 (go

@@ -28,8 +28,7 @@
                         :compiler {:output-to "resources/public/js/prod.js"
                                    :optimizations :advanced
                                    :output-dir "resources/public/js/cljs-prod/"
-                                   :pretty-print false
-                                   :source-map false}}]}
+                                   :pretty-print false}}]}
   
   :plugins [[lein-cljsbuild "1.1.7"]
             [lein-figwheel "0.5.13"]]
