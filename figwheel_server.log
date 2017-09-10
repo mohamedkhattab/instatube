@@ -953,3 +953,49 @@ notifying browser that file changed:  resources/public/js/cljs-dev/instatube/cor
 notifying browser that file changed:  resources/public/js/dev.js
 notifying browser that file changed:  resources/public/js/cljs-dev/goog/deps.js
 notifying browser that file changed:  resources/public/js/cljs-dev/instatube/core.js
+[0mCompiling "resources/public/js/dev.js" from ["src/instatube/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/dev.js" in 0.379 seconds.[0m
+notifying browser that file changed:  resources/public/js/cljs-dev/instatube/core.js
+[0mCompiling "resources/public/js/dev.js" from ["src/instatube/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/dev.js" in 0.399 seconds.[0m
+notifying browser that file changed:  resources/public/js/cljs-dev/instatube/core.js
+[0mCompiling "resources/public/js/dev.js" from ["src/instatube/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/dev.js" in 0.381 seconds.[0m
+notifying browser that file changed:  resources/public/js/dev.js
+notifying browser that file changed:  resources/public/js/cljs-dev/goog/deps.js
+notifying browser that file changed:  resources/public/js/cljs-dev/instatube/core.js
+[0mCompiling "resources/public/js/dev.js" from ["src/instatube/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/dev.js" in 0.386 seconds.[0m
+notifying browser that file changed:  resources/public/js/cljs-dev/instatube/core.js
+[0mCompiling "resources/public/js/dev.js" from ["src/instatube/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/dev.js" in 0.376 seconds.[0m
+notifying browser that file changed:  resources/public/js/cljs-dev/instatube/core.js
+[0mCompiling "resources/public/js/dev.js" from ["src/instatube/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/dev.js" in 0.348 seconds.[0m
+notifying browser that file changed:  resources/public/js/cljs-dev/instatube/core.js
+Notifying browser that CSS file changed: resources/public/css/style.css
+Notifying browser that CSS file changed: resources/public/css/style.css
+Notifying browser that CSS file changed: resources/public/css/style.css
+[0mCompiling "resources/public/js/dev.js" from ["src/instatube/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/dev.js" in 0.33 seconds.[0m
+notifying browser that file changed:  resources/public/js/cljs-dev/instatube/core.js
+[0mCompiling "resources/public/js/dev.js" from ["src/instatube/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/dev.js" in 0.329 seconds.[0m
+notifying browser that file changed:  resources/public/js/cljs-dev/instatube/core.js
+[0mCompiling "resources/public/js/dev.js" from ["src/instatube/cljs"]...[0m
+[31mFailed to compile "resources/public/js/dev.js" in 0.204 seconds.[0m
+[36m----  Could not Read  src/instatube/cljs/core.cljs   line:21 ----[0m
+
+  [1m/home/mohamed/workspace/clojure/cljs/instatube/src/instatube/cljs/core.cljs [line 21, col 30] Unmatched delimiter }.[0m
+
+  [36m20[0m  [36m           ;; PROBLEM very hacky soultion, must find a better solution[0m
+  [33m21[0m  [1m           :active-video {}}}))[0m
+  [0m  [0m  [33m           /home/mohamed/workspace/clojure/cljs/instatube/src/instatube/cljs/core.cljs [line 21, col 30] Unmatched delimiter }.[0m
+  [36m22[0m  [36m[0m
+  [36m23[0m  [36m;; Arbitrary events will be pushed on the event channel (queue)[0m
+  [36m24[0m  [36m(def EVENTCHANNEL (chan))[0m
+
+[36m----  Reader Error : Please see src/instatube/cljs/core.cljs  ----[0m
+[0mCompiling "resources/public/js/dev.js" from ["src/instatube/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/dev.js" in 0.328 seconds.[0m
+notifying browser that file changed:  resources/public/js/cljs-dev/instatube/core.js

@@ -18,30 +18,7 @@
            :videos []
            
            ;; PROBLEM very hacky soultion, must find a better solution
-           :active-video {:kind "youtube#searchResult",
-                          :etag "\"m2yskBQFythfE4irbTIeOgYYfBU/oOcAJY2tsrC2VF66LWE9XMHGULc\"",
-                          :id {:kind "youtube#video", :videoId "SW-BU6keEUw"},
-                          :snippet
-                          {:publishedAt "2014-05-05T16:31:39.000Z",
-                           :channelId "UClMFPzhYPLlOR4ojWwFWZfg",
-                           :title "Eminem - \"Mom's Spaghetti\" (Music Video)",
-                           :description
-                           "parody Lyric subtitles available in video options (click the CC icon)",
-                           :thumbnails
-                           {:default
-                            {:url "https://i.ytimg.com/vi/SW-BU6keEUw/default.jpg",
-                             :width 120,
-                             :height 90},
-                            :medium
-                            {:url "https://i.ytimg.com/vi/SW-BU6keEUw/mqdefault.jpg",
-                             :width 320,
-                             :height 180},
-                            :high
-                            {:url "https://i.ytimg.com/vi/SW-BU6keEUw/hqdefault.jpg",
-                             :width 480,
-                             :height 360}},
-                           :channelTitle "Jay Green's stuff", 
-                           :liveBroadcastContent "none"}}}))
+           :active-video {}}))
 
 ;; Arbitrary events will be pushed on the event channel (queue)
 (def EVENTCHANNEL (chan))
@@ -62,6 +39,21 @@
 (defn get-active-video! []
   (:active-video @app-state))
 
+(def debounced-youtube-query (util/debounce (fn [term]
+                                              (ajax/GET
+                                               ;; search URI
+                                               "https://www.googleapis.com/youtube/v3/search"
+
+                                               ;; URI parameters
+                                               {:params {:q term
+                                                         :maxResults 5
+                                                         :part "snippet"
+                                                         :type "video,playlist"
+                                                         :key YOUTUBE_API_KEY}
+                                                :handler handle-youtube-resonse
+                                                :response-format (ajax/json-response-format {:keywords? true})}))
+                                            300))
+
 ;; Define different events for handling user input
 (def EVENTS
   ;; handles user click on nav bar links
@@ -78,20 +70,9 @@
    :update-active-video (fn [{:keys [active-video]}]
                           (swap! app-state assoc-in [:active-video] active-video))
    
-   :query-youtube-search (util/debounce (fn [{:keys [term]}]
-                                          (ajax/GET
-                                           ;; search URI
-                                           "https://www.googleapis.com/youtube/v3/search"
-
-                                           ;; URI parameters
-                                           {:params {:q term
-                                                     :maxResults 5
-                                                     :part "snippet"
-                                                     :type "video,playlist"
-                                                     :key YOUTUBE_API_KEY}
-                                            :handler handle-youtube-resonse
-                                            :response-format (ajax/json-response-format {:keywords? true})}))
-                                        500)})
+   :query-youtube-search (fn [{:keys [term]}]
+                           (debounced-youtube-query term)
+                           (swap! app-state assoc-in [:active-video] (first (:videos @app-state))))})
 
 ;; initialize UI state
 (put! EVENTCHANNEL [:query-youtube-search {:term (:term @app-state)}])
@@ -111,14 +92,14 @@
     [:iframe {:class "embed-responsive-item"
               :allow-full-screen "allowfullscreen"
               :frame-border 0
-              :src (str "https://www.youtube.com/embed/" videoId)}]]
+              :src (str "https://www.youtube.com/embed/" (if (nil? videoId) "SW-BU6keEUw" videoId))}]]
 
    [:div {:class "details"}
-    [:div {:class "title"} title]
-    [:div {:class "description"} desc]]
+    [:div {:class "title"} (if (nil? title) "Eminem - \"Mom's Spaghetti\" (Music Video)" title)]
+    [:div {:class "description"} (if (nil? desc) "parody Lyric subtitles available in video options (click the CC icon)" desc)]]
 
    [:div {:class "footer"}
-    [:p {} "created by " [:a {:href "#"} "Mohamed Khattab"]]]])
+    [:p {} "InstaTube by " [:a {:href "#"} "Mohamed Khattab"]]]])
 
 (defn app []
   [:div {:class "container"}
