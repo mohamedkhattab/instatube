@@ -51,9 +51,8 @@
                                                          :type "video,playlist"
                                                          :key YOUTUBE_API_KEY}
                                                 :handler handle-youtube-resonse
-                                                :response-format (ajax/json-response-format {:keywords? true})}
-
-                                               {:headers {:referer "https://www.youtube.com/"
+                                                :response-format (ajax/json-response-format {:keywords? true})
+                                                :headers {:referer "https://www.youtube.com/"
                                                           :x-spf-referer "https://www.youtube.com/"}}))
                                             300))
 
@@ -96,7 +95,7 @@
               :allow-full-screen "allowfullscreen"
               :frame-border 0
               :auto-play 1
-              :src (str "https://www.youtube.com/embed/" (if (nil? videoId) "SW-BU6keEUw" videoId) "?autoplay=1")}]]
+              :src (str "https://www.youtube.com/embed/" (if (nil? videoId) "SW-BU6keEUw" videoId) "?autoplay=1&enablejsapi=1")}]]
 
    [:div {:class "details"}
     [:div {:class "title"} (if (nil? title) "Eminem - \"Mom's Spaghetti\" (Music Video)" title)]
