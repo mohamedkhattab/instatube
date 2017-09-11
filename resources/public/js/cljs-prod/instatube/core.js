@@ -32,7 +32,7 @@ return cljs.core.cst$kw$active_DASH_video.cljs$core$IFn$_invoke$arity$1(cljs.cor
 instatube.core.debounced_youtube_query = instatube.util.debounce((function (term){
 return ajax.core.GET.cljs$core$IFn$_invoke$arity$variadic("https://www.googleapis.com/youtube/v3/search",cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 3, [cljs.core.cst$kw$params,new cljs.core.PersistentArrayMap(null, 5, [cljs.core.cst$kw$q,term,cljs.core.cst$kw$maxResults,(5),cljs.core.cst$kw$part,"snippet",cljs.core.cst$kw$type,"video,playlist",cljs.core.cst$kw$key,instatube.core.YOUTUBE_API_KEY], null),cljs.core.cst$kw$handler,instatube.core.handle_youtube_resonse,cljs.core.cst$kw$response_DASH_format,(function (){var G__14579 = new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$keywords_QMARK_,true], null);
 return (ajax.core.json_response_format.cljs$core$IFn$_invoke$arity$1 ? ajax.core.json_response_format.cljs$core$IFn$_invoke$arity$1(G__14579) : ajax.core.json_response_format.call(null,G__14579));
-})()], null)], 0));
+})()], null),new cljs.core.PersistentArrayMap(null, 1, [cljs.core.cst$kw$headers,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.cst$kw$referer,"https://www.youtube.com/",cljs.core.cst$kw$x_DASH_spf_DASH_referer,"https://www.youtube.com/"], null)], null)], 0));
 }),(300));
 instatube.core.EVENTS = new cljs.core.PersistentArrayMap(null, 5, [cljs.core.cst$kw$update_DASH_active_DASH_item,(function (p__14580){
 var map__14581 = p__14580;
