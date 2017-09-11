@@ -51,7 +51,10 @@
                                                          :type "video,playlist"
                                                          :key YOUTUBE_API_KEY}
                                                 :handler handle-youtube-resonse
-                                                :response-format (ajax/json-response-format {:keywords? true})}))
+                                                :response-format (ajax/json-response-format {:keywords? true})}
+
+                                               {:headers {:referer "https://www.youtube.com/"
+                                                          :x-spf-referer "https://www.youtube.com/"}}))
                                             300))
 
 ;; Define different events for handling user input
