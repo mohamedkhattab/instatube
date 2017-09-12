@@ -51,9 +51,7 @@
                                                          :type "video,playlist"
                                                          :key YOUTUBE_API_KEY}
                                                 :handler handle-youtube-resonse
-                                                :response-format (ajax/json-response-format {:keywords? true})
-                                                :headers {:referer "https://www.youtube.com/"
-                                                          :x-spf-referer "https://www.youtube.com/"}}))
+                                                :response-format (ajax/json-response-format {:keywords? true})}))
                                             300))
 
 ;; Define different events for handling user input
@@ -88,6 +86,11 @@
       ((event-name EVENTS) event-data))))
 ;; END event loop
 
+(js/Object.defineProperty js/document "referrer"
+                             (js-obj {:get
+                                      (fn []
+                                        (str "https://www.youtube.com"))}))
+
 (defn video-container [videoId title desc]
   [:div {:class "video-detail col-md-8"}
    [:div {:class "embed-responsive embed-responsive-16by9"}
@@ -95,7 +98,9 @@
               :allow-full-screen "allowfullscreen"
               :frame-border 0
               :auto-play 1
-              :src (str "https://www.youtube.com/embed/" (if (nil? videoId) "SW-BU6keEUw" videoId) "?autoplay=1&enablejsapi=1")}]]
+              :src (str "https://www.youtube.com/embed/"
+                        (if (nil? videoId) "SW-BU6keEUw" videoId)
+                        "?autoplay=1&enablejsapi=1&origin=https://www.youtube.com&widget_referrer=https://www.youtube.com&rel=0")}]]
 
    [:div {:class "details"}
     [:div {:class "title"} (if (nil? title) "Eminem - \"Mom's Spaghetti\" (Music Video)" title)]

@@ -1041,3 +1041,44 @@ notifying browser that file changed:  resources/public/js/cljs-dev/instatube/cor
 [0mCompiling "resources/public/js/dev.js" from ["src/instatube/cljs"]...[0m
 [32mSuccessfully compiled "resources/public/js/dev.js" in 0.381 seconds.[0m
 notifying browser that file changed:  resources/public/js/cljs-dev/instatube/core.js
+[0mCompiling "resources/public/js/dev.js" from ["src/instatube/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/dev.js" in 1.013 seconds.[0m
+notifying browser that file changed:  resources/public/js/dev.js
+notifying browser that file changed:  resources/public/js/cljs-dev/goog/deps.js
+notifying browser that file changed:  resources/public/js/cljs-dev/instatube/core.js
+[0mCompiling "resources/public/js/dev.js" from ["src/instatube/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/dev.js" in 1.036 seconds.[0m
+notifying browser that file changed:  resources/public/js/dev.js
+notifying browser that file changed:  resources/public/js/cljs-dev/goog/deps.js
+notifying browser that file changed:  resources/public/js/cljs-dev/instatube/core.js
+[0mCompiling "resources/public/js/dev.js" from ["src/instatube/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/dev.js" in 0.365 seconds.[0m
+notifying browser that file changed:  resources/public/js/cljs-dev/instatube/core.js
+[0mCompiling "resources/public/js/dev.js" from ["src/instatube/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/dev.js" in 0.377 seconds.[0m
+notifying browser that file changed:  resources/public/js/cljs-dev/instatube/core.js
+[0mCompiling "resources/public/js/dev.js" from ["src/instatube/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/dev.js" in 0.352 seconds.[0m
+notifying browser that file changed:  resources/public/js/cljs-dev/instatube/core.js
+[0mCompiling "resources/public/js/dev.js" from ["src/instatube/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/dev.js" in 1.108 seconds.[0m
+notifying browser that file changed:  resources/public/js/dev.js
+notifying browser that file changed:  resources/public/js/cljs-dev/goog/deps.js
+notifying browser that file changed:  resources/public/js/cljs-dev/instatube/core.js
+[0mCompiling "resources/public/js/dev.js" from ["src/instatube/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/dev.js" in 0.362 seconds.[0m
+notifying browser that file changed:  resources/public/js/cljs-dev/instatube/core.js
+[0mCompiling "resources/public/js/dev.js" from ["src/instatube/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/dev.js" in 0.398 seconds.[0m
+notifying browser that file changed:  resources/public/js/cljs-dev/instatube/core.js
+[0mCompiling "resources/public/js/dev.js" from ["src/instatube/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/dev.js" in 0.394 seconds.[0m
+notifying browser that file changed:  resources/public/js/cljs-dev/instatube/core.js
+[0mCompiling "resources/public/js/dev.js" from ["src/instatube/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/dev.js" in 0.392 seconds.[0m
+notifying browser that file changed:  resources/public/js/cljs-dev/instatube/core.js
+[0mCompiling "resources/public/js/dev.js" from ["src/instatube/cljs"]...[0m
+[32mSuccessfully compiled "resources/public/js/dev.js" in 0.386 seconds.[0m
+notifying browser that file changed:  resources/public/js/dev.js
+notifying browser that file changed:  resources/public/js/cljs-dev/goog/deps.js
+notifying browser that file changed:  resources/public/js/cljs-dev/instatube/core.js
