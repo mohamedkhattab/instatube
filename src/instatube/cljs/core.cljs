@@ -48,7 +48,7 @@
                                                {:params {:q term
                                                          :maxResults 5
                                                          :part "snippet"
-                                                         :type "video,playlist"
+                                                         :type "video"
                                                          :key YOUTUBE_API_KEY}
                                                 :handler handle-youtube-resonse
                                                 :response-format (ajax/json-response-format {:keywords? true})}))
