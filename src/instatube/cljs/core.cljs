@@ -100,14 +100,14 @@
               :auto-play 1
               :src (str "https://www.youtube.com/embed/"
                         (if (nil? videoId) "SW-BU6keEUw" videoId)
-                        "?autoplay=1&enablejsapi=1&origin=https://www.youtube.com&widget_referrer=https://www.youtube.com&rel=0")}]]
+                        "?autoplay=1&enablejsapi=1&origin=https://www.youtube.com&rel=0&loop=1")}]]
 
    [:div {:class "details"}
     [:div {:class "title"} (if (nil? title) "Eminem - \"Mom's Spaghetti\" (Music Video)" title)]
     [:div {:class "description"} (if (nil? desc) "parody Lyric subtitles available in video options (click the CC icon)" desc)]]
 
    [:div {:class "footer"}
-    [:p {} "InstaTube by " [:a {:href "mailto:mohamedkhattab@protonmail.com?Subject=InstaTube"} "Mohamed Khattab"]]]])
+    [:p {} "InstaTube by " [:a {:href "https://www.facebook.com/photo.php?fbid=10212265116655567&set=a.2410213467219.122028.1607704221&type=3&theater"} "Mohamed Khattab"]]]])
 
 (defn app []
   [:div {:class "container"}
