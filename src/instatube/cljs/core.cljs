@@ -17,7 +17,6 @@
            :term "mom's spaghetti"
            :videos []
            
-           ;; PROBLEM very hacky soultion, must find a better solution
            :active-video {}}))
 
 ;; Arbitrary events will be pushed on the event channel (queue)
