@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 *~
 resources/public/js/cljs-dev/*
 resources/public/js/dev.js
@@ -16,4 +15,4 @@ pom.xml.asc
 .lein-plugins/
 .lein-failures
 .nrepl-port
->>>>>>> 9d8b43705bb5a38d7bf70479dc89997558b7aafb
+*.log
