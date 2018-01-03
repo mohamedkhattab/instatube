@@ -8,4 +8,4 @@ Site is live at https://instatube.net
 
 Copyright © 2017 Mohamed Khattab
 
-Distributed under the Eclipse Public License either version 1.0
+Distributed under the Eclipse Public License version 1.0
