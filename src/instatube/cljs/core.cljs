@@ -9,7 +9,7 @@
             [instatube.util :as util]))
 
 ;; The Youtube API KEY
-(def YOUTUBE_API_KEY "AIzaSyANo3bt4bOjVU_VxSGwkbZSfrLoj9VREGo")
+(def YOUTUBE_API_KEY "API_KEY")
 
 ;; define the main app state (once for figwheel)
 (defonce app-state
